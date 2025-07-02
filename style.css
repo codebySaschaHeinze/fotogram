@@ -20,29 +20,28 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-color: rgb(33, 53, 89);
+  background-color: rgb(79, 55, 19);
 }
 
 header {
   height: 70px;
   max-width: 100%;
-  background-color: rgb(47, 98, 107);
-  box-shadow: 3px 0 10px 2px rgb(47, 98, 107);
+  background-color: rgb(90, 57, 22);
+  /*box-shadow: 3px 0 10px 2px rgb(89, 75, 33);*/
 }
 
 p {
   font-family: "pFont";
   color: rgb(228, 243, 177);
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 200;
-  padding-top: 20px;
 }
 
 footer {
   height: 50px;
   max-width: 100%;
-  background-color: rgb(47, 98, 107);
-  box-shadow: 3px 0 10px 2px rgb(47, 98, 107);
+  background-color: rgb(90, 57, 22);
+  /*box-shadow: 3px 0 10px 2px rgb(89, 75, 33s);*/
 }
 
 .mainContainer {
@@ -74,4 +73,37 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#imageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 48px 48px 48px;
+}
+
+#imageContainer img {
+  width: 100px;
+  aspect-ratio: 1/1;
+  /*object-fit: cover;*/
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+#imageContainer img:hover {
+  transform: scale(1.075);
+}
+
+.d_none {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  height: 50vh;
+  width: 50%;
 }
