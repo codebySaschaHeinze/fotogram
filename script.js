@@ -14,10 +14,12 @@ const teaArray = [
 ];
 
 // Referenzen auf Overlay-Elemente
-const overlay = document.getElementById("overlay"); // ID="overlay" wird zu einer Konstanten, die "overlay" heißt"
+// "document.getElementById" oder "document.getElementByClass"
+// "QuerySelector" sucht ein css-Element, dass zur entsprechenden Klasse passt
+const overlay = document.getElementById("overlay"); // ID="overlay" wird zu einer Konstanten, "overlay" heißt"
 const overlayImage = document.getElementById("overlayImage"); // ID="overlayImage" wird zu einer Konstanten, die "overlayImage" heißt
-const closeButton = document.querySelector(".closeOverlay");
-const imageContainer = document.getElementById("imageContainer");
+const closeButton = document.querySelector(".closeOverlay"); // class="closeOverlay" wird zu einer Konstanten, die "closeButton" heißt
+const imageContainer = document.getElementById("imageContainer"); // ID="imageContainer" wird zu einer Konstanten, die "imageContainer" heißt
 
 // Schließen-Handler
 closeButton.addEventListener("click", () => {
