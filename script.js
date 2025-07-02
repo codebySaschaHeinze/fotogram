@@ -14,8 +14,8 @@ const teaArray = [
 ];
 
 // Referenzen auf Overlay-Elemente
-const overlay = document.getElementById("overlay");
-const overlayImage = document.getElementById("overlayImage");
+const overlay = document.getElementById("overlay"); // ID="overlay" wird zu einer Konstanten, die "overlay" heißt"
+const overlayImage = document.getElementById("overlayImage"); // ID="overlayImage" wird zu einer Konstanten, die "overlayImage" heißt
 const closeButton = document.querySelector(".closeOverlay");
 const imageContainer = document.getElementById("imageContainer");
 
