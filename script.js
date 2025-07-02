@@ -13,30 +13,31 @@ const teaArray = [
   "./img/t12.jpg",
 ];
 
+// Referenzen auf Overlay-Elemente
+const overlay = document.getElementById("overlay");
+const overlayImage = document.getElementById("overlayImage");
+const closeButton = document.querySelector(".closeOverlay");
 const imageContainer = document.getElementById("imageContainer");
 
-const imageElements = teaArray.map((imageUrl) => {
+// Schließen-Handler
+closeButton.addEventListener("click", () => {
+  overlay.classList.add("d_none");
+});
+
+// Vorschaubilder erzeugen und in den Container hängen
+teaArray.forEach((imageUrl) => {
   const teaCup = document.createElement("img");
   teaCup.src = imageUrl;
   teaCup.alt = "a nice cup of tea";
-  return teaCup;
+  teaCup.addEventListener("click", functionImageClick);
+  imageContainer.appendChild(teaCup);
 });
 
-imageElements.forEach((img) => {
-  img.addEventListener("click", functionImageClick);
-  imageContainer.appendChild(img);
-});
-
+// Funktion, die für jedes Vorschaubild aufgerufen wird
 function functionImageClick(event) {
-  const overlay = document.getElementById("overlay");
-  const overlayContent = document.querySelector(".overlayContent");
+  // Overlay einblenden
   overlay.classList.remove("d_none");
-
-  const src = event.target.src;
-  const alt = event.target.alt;
-  overlayContent.innerHTML = `<img class="closeOverlay" src="./img/logo_small_white.png" alt="Schließen"> <img src="${src}" alt="${alt}" style="max-width:90%; max-height:90%;">`;
-  const closeButton = overlayContent.querySelector(".closeOverlay");
-  closeButton.addEventListener("click", () => {
-    overlay.classList.add("d_none");
-  });
+  // Großes Bild tauschen
+  overlayImage.src = event.target.src;
+  overlayImage.alt = event.target.alt;
 }

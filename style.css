@@ -98,7 +98,7 @@ footer {
   transform: scale(1.075);
 }
 
-.d_none {
+.overlay.d_none {
   display: none;
 }
 
@@ -138,5 +138,5 @@ footer {
   height: 20px;
   width: 20px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 5;
 }

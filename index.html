@@ -26,12 +26,24 @@
     <main class="mainContainer">
       <div id="overlay" class="overlay d_none">
         <div class="overlayBackground"></div>
-        <div class="overlayContent">großes Bild</div>
+        <div class="overlayContent">
+          <img
+            class="closeOverlay"
+            src="./img/close-button.png"
+            alt="Schließen"
+          />
+          <img
+            id="overlayImage"
+            src=""
+            alt=""
+            style="max-width: 90%; max-height: 90%"
+          />
+        </div>
       </div>
 
       <div class="contentContainer">
         <p>Let the steam guide your dream</p>
-        <div onclick="functionImageClick()" id="imageContainer"></div>
+        <div id="imageContainer"></div>
       </div>
     </main>
 
