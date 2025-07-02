@@ -12,3 +12,17 @@ const teaImgs = [
   "./img/t11.png",
   "./img/t12.png",
 ];
+
+// function zum rendern
+
+// function für onclick (overlay)
+
+// richtiges Bild öffnen
+
+// overlay schließen
+
+// nächstes/vorherriges Bild im overlay öffnen
+
+// (z-index für Overlay)
+
+//

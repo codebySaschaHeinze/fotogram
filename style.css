@@ -20,14 +20,14 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-color: rgb(177, 140, 39);
+  background-color: rgb(33, 53, 89);
 }
 
 header {
   height: 70px;
   max-width: 100%;
-  background-color: rgb(133, 139, 46);
-  box-shadow: 3px 0 10px 2px rgb(133, 139, 46);
+  background-color: rgb(47, 98, 107);
+  box-shadow: 3px 0 10px 2px rgb(47, 98, 107);
 }
 
 p {
@@ -41,8 +41,8 @@ p {
 footer {
   height: 50px;
   max-width: 100%;
-  background-color: rgb(133, 139, 46);
-  box-shadow: 3px 0 10px 2px rgb(133, 139, 46);
+  background-color: rgb(47, 98, 107);
+  box-shadow: 3px 0 10px 2px rgb(47, 98, 107);
 }
 
 .mainContainer {
