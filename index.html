@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fotogram</title>
+    <title>Foteagram</title>
     <link
       rel="shortcut icon"
       href="./img/fotogram-favicon.png"
@@ -24,12 +24,17 @@
     </header>
 
     <main class="mainContainer">
+      <div id="overlay" class="overlay d_none">
+        <div class="overlayBackground"></div>
+        <div class="overlayContent">großes Bild</div>
+      </div>
+
       <div class="contentContainer">
         <p>Let the steam guide your dream</p>
-        <div id="imageContainer"></div>
+        <div onclick="functionImageClick()" id="imageContainer"></div>
       </div>
     </main>
-    <div id="overlay" class="overlay d_none"></div>
+
     <footer></footer>
   </body>
   <script src="./script.js"></script>

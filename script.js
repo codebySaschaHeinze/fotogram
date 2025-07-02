@@ -23,9 +23,19 @@ const imageElements = teaArray.map((imageUrl) => {
   return teaCup;
 });
 
-imageElements.forEach((img) => imageContainer.appendChild(img));
+// imageElements.forEach((img) => imageContainer.appendChild(img));
 
 // function für onclick (overlay)
+
+function functionImageClick(event) {
+  const overlay = document.getElementById("overlay");
+  const overlayContent = document.querySelector(".overlayContent");
+  overlay.classList.remove("d_none");
+  const src = event.target.src;
+  const alt = event.target.alt;
+  overlayContent.innerHTML = `<img src="${src}" alt="${alt}" style="max-width:90%; max-height:90%;">`;
+}
+// richtiges Bild in overlayContent einfügen
 
 // function toggleOverlay() {
 //   let overlayRef = document.getElementById("overlay");

@@ -85,7 +85,7 @@ footer {
 }
 
 #imageContainer img {
-  width: 100px;
+  width: clamp(50px, 100px, 150px);
   aspect-ratio: 1/1;
   /*object-fit: cover;*/
   border-radius: 8px;
@@ -104,6 +104,29 @@ footer {
 
 .overlay {
   position: absolute;
-  height: 50vh;
-  width: 50%;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlayBackground {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.overlayContent {
+  position: relative;
+  z-index: 2;
+  height: 70vh;
+  width: 30vw;
+  background: rgba(64, 45, 18, 0.96);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.5);
 }
