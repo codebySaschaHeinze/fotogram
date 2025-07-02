@@ -13,7 +13,6 @@ const teaArray = [
   "./img/t12.jpg",
 ];
 
-// function zum rendern
 const imageContainer = document.getElementById("imageContainer");
 
 const imageElements = teaArray.map((imageUrl) => {
@@ -27,7 +26,6 @@ imageElements.forEach((img) => {
   img.addEventListener("click", functionImageClick);
   imageContainer.appendChild(img);
 });
-// function für onclick (overlay)
 
 function functionImageClick(event) {
   const overlay = document.getElementById("overlay");
@@ -42,19 +40,3 @@ function functionImageClick(event) {
     overlay.classList.add("d_none");
   });
 }
-// richtiges Bild in overlayContent einfügen
-
-// function toggleOverlay() {
-//   let overlayRef = document.getElementById("overlay");
-
-//   overlayRef.classList.toggle("d_none");
-// }
-// richtiges Bild öffnen
-
-// overlay schließen
-
-// nächstes/vorherriges Bild im overlay öffnen
-
-// (z-index für Overlay)
-
-//
