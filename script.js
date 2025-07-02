@@ -23,17 +23,29 @@ const imageElements = teaArray.map((imageUrl) => {
   return teaCup;
 });
 
-// imageElements.forEach((img) => imageContainer.appendChild(img));
-
+imageElements.forEach((img) => {
+  img.addEventListener("click", functionImageClick);
+  imageContainer.appendChild(img);
+});
 // function für onclick (overlay)
 
 function functionImageClick(event) {
   const overlay = document.getElementById("overlay");
   const overlayContent = document.querySelector(".overlayContent");
   overlay.classList.remove("d_none");
+
   const src = event.target.src;
   const alt = event.target.alt;
-  overlayContent.innerHTML = `<img src="${src}" alt="${alt}" style="max-width:90%; max-height:90%;">`;
+  //overlayContent.innerHTML = `<img class="closeOverlay" src="./img/close-button.png" alt="Schließen"> <img src="${src}" alt="${alt}" style="max-width:90%; max-height:90%;">`;
+
+  overlayContent.innerHTML = `<img class="closeOverlay" src="https://placehold.co/40x40/red/white?text=X" alt="Schließen">
+  <img src="${src}" alt="${alt}" style="max-width:90%; max-height:90%;">
+`;
+
+  const closeButton = overlayContent.querySelector(".closeOverlay");
+  closeButton.addEventListener("click", () => {
+    overlay.classList.add("d_none");
+  });
 }
 // richtiges Bild in overlayContent einfügen
 

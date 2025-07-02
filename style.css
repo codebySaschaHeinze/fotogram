@@ -130,3 +130,12 @@ footer {
   align-items: center;
   box-shadow: 0 6px 32px rgba(0, 0, 0, 0.5);
 }
+
+.closeOverlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+}
