@@ -36,12 +36,7 @@ function functionImageClick(event) {
 
   const src = event.target.src;
   const alt = event.target.alt;
-  //overlayContent.innerHTML = `<img class="closeOverlay" src="./img/close-button.png" alt="Schließen"> <img src="${src}" alt="${alt}" style="max-width:90%; max-height:90%;">`;
-
-  overlayContent.innerHTML = `<img class="closeOverlay" src="https://placehold.co/40x40/red/white?text=X" alt="Schließen">
-  <img src="${src}" alt="${alt}" style="max-width:90%; max-height:90%;">
-`;
-
+  overlayContent.innerHTML = `<img class="closeOverlay" src="./img/logo_small_white.png" alt="Schließen"> <img src="${src}" alt="${alt}" style="max-width:90%; max-height:90%;">`;
   const closeButton = overlayContent.querySelector(".closeOverlay");
   closeButton.addEventListener("click", () => {
     overlay.classList.add("d_none");
