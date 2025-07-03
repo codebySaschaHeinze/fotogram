@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="renderImages()">
     <header>
       <div class="fotogramAndLogo">
         <img
@@ -24,30 +24,10 @@
     </header>
 
     <main class="mainContainer">
-      <div id="overlay" class="overlay d_none">
-        <div class="overlayBackground"></div>
-        <div class="overlayContent">
-          <img
-            class="closeOverlay"
-            src="./img/close-button.png"
-            alt="Schließen"
-          />
-          <img
-            id="overlayImage"
-            src=""
-            alt=""
-            style="max-width: 90%; max-height: 90%"
-          />
-        </div>
-      </div>
-
-      <div class="contentContainer">
-        <p>Let the steam guide your dream</p>
-        <div id="imageContainer"></div>
-      </div>
+      <div id="imageContainer"></div>
     </main>
 
     <footer></footer>
   </body>
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
 </html>
