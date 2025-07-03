@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foteagram</title>
-    <link
-      rel="shortcut icon"
-      href="./img/foteagram-favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body onload="renderImages()">
@@ -28,11 +24,12 @@
 
       <div id="imageContainer"></div>
       <div id="overlay" class="overlay d_none">
+        <img id="overlayImage" src="" alt="" />
         <img
           class="closeButton"
           src="./img/close-button.png"
           alt="Schließen"
-          onclick="removeOverlay()"
+          onclick="closeOverlay()"
         />
         <img
           class="nextButton"
@@ -46,7 +43,6 @@
           alt="Vorheriges Bild"
           onclick="prevImage()"
         />
-        <img id="overlayImage" src="" alt="" />
       </div>
     </main>
 

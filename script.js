@@ -13,6 +13,26 @@ const images = [
   "./img/t12.jpg",
 ];
 
+const texts = [
+  "Herbsttage schmecken nach Gewürztee und Stille.",
+  "Ein Schluck Morgenruhe, bevor der Tag beginnt.",
+  "Manchmal braucht es nur Tee und Zeit.",
+  "Blumen am Rand, Wärme in der Hand.",
+  "Wintermorgen. Leise. Klar. Einfach sein.",
+  "Fenster auf, Gedanken raus, Tee rein.",
+  "Wie Blüten im Wasser - so leicht fühlt sich heute an.",
+  "Zimt, Tee und ein Hauch von Weihnachten.",
+  "Erde. Tee. Nüsse. Alles verbunden.",
+  "Montagmorgen. Stärker als jeder Kaffee.",
+  "Goldene Ruhe in klarer Glastasse.",
+  "Ein Moment für dich. Nur Tee und Wärme.",
+];
+
+let imageContainer = document.getElementById("imageContainer");
+let overlay = document.getElementById("overlay");
+let overlayImage = document.getElementById("overlayImage");
+let currentImage = 0;
+
 function renderImages() {
   let imageContainer = document.getElementById("imageContainer");
   imageContainer.innerHTML = "";
@@ -21,21 +41,17 @@ function renderImages() {
   }
 }
 
-let imageContainer = document.getElementById("imageContainer");
-let overlay = document.getElementById("overlay");
-let overlayImage = document.getElementById("overlayImage");
-let currentImage = 0;
-
 function showOverlay(event) {
   overlayImage.src = event.target.src;
   overlay.classList.remove("d_none");
   currentImage = images.indexOf(event.target.src);
+  let imageContainer = document.getElementById("imageContainer");
+  imageContainer.innerHTML += `<p class="textContainer" >${texts[i]}</p>`;
 }
 
-function removeOverlay() {
+function closeOverlay() {
   overlay.classList.add("d_none");
 }
-
 imageContainer.addEventListener("click", showOverlay);
 
 function nextImage() {

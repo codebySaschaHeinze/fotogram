@@ -150,3 +150,9 @@ footer {
   width: auto;
   cursor: pointer;
 }
+
+.textContainer {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+}
