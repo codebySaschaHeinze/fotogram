@@ -24,10 +24,12 @@ function renderImages() {
 let imageContainer = document.getElementById("imageContainer");
 let overlay = document.getElementById("overlay");
 let overlayImage = document.getElementById("overlayImage");
+let currentImage = 0;
 
 function showOverlay(event) {
   overlayImage.src = event.target.src;
   overlay.classList.remove("d_none");
+  currentImage = images.indexOf(event.target.src);
 }
 
 function removeOverlay() {
@@ -36,6 +38,12 @@ function removeOverlay() {
 
 imageContainer.addEventListener("click", showOverlay);
 
-function nextImage() {}
+function nextImage() {
+  currentImage = (currentImage + 1) % images.length;
+  overlayImage.src = images[currentImage];
+}
 
-function prevImage() {}
+function prevImage() {
+  currentImage = (currentImage - 1 + images.length) % images.length;
+  overlayImage.src = images[currentImage];
+}
