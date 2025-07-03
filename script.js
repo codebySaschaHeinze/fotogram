@@ -44,9 +44,10 @@ function renderImages() {
 function showOverlay(event) {
   overlayImage.src = event.target.src;
   overlay.classList.remove("d_none");
-  currentImage = images.indexOf(event.target.src);
-  let imageContainer = document.getElementById("imageContainer");
-  imageContainer.innerHTML += `<p class="textContainer" >${texts[i]}</p>`;
+  const clickedFile = event.target.src.split("/").pop();
+  currentImage = images.findIndex((img) => img.endsWith(clickedFile));
+  let textContainer = document.getElementById("textContainer");
+  textContainer.innerHTML = `<p class="textContainer">${texts[currentImage]}</p>`;
 }
 
 function closeOverlay() {
@@ -57,9 +58,16 @@ imageContainer.addEventListener("click", showOverlay);
 function nextImage() {
   currentImage = (currentImage + 1) % images.length;
   overlayImage.src = images[currentImage];
+  updateText();
 }
 
 function prevImage() {
   currentImage = (currentImage - 1 + images.length) % images.length;
   overlayImage.src = images[currentImage];
+  updateText();
+}
+
+function updateText() {
+  let textContainer = document.getElementById("textContainer");
+  textContainer.innerHTML = `<p class="textContainer">${texts[currentImage]}</p>`;
 }
