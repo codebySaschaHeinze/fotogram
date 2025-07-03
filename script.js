@@ -18,22 +18,22 @@ const images = [
 ];
 
 const texts = [
+  "Mehr Tee, weniger Drama.",
   "Ein Schluck Morgenruhe, bevor der Tag beginnt.",
   "Manchmal braucht es nur Tee und Zeit.",
   "Blumen am Rand, Wärme in der Hand.",
-  "Wintermorgen. Leise. Klar. Einfach sein.",
   "Herbsttage schmecken nach Gewürztee und Stille.",
-  "Fenster auf, Gedanken raus, Tee rein.",
+  "Wintermorgen. Leise. Klar. Einfach sein.",
   "Wie Blüten im Wasser, so leicht fühlt sich heute an.",
-  "Zimt, Tee und ein Hauch von Weihnachten.",
+  "Fenster auf, Gedanken raus, Tee rein.",
   "Erde. Tee. Nüsse. Alles verbunden.",
+  "Zimt, Tee und ein Hauch von Weihnachten.",
   "Montagmorgen. Stärker als jeder Kaffee.",
   "Goldene Ruhe in klarer Glastasse.",
   "Ein Moment für dich. Nur Tee und Wärme.",
   "Still sein. Tee trinken. Weitermachen.",
   "Tee statt Worte. Reicht manchmal.",
   "Kurz atmen, lang Tee trinken.",
-  "Mehr Tee, weniger Drama.",
 ];
 
 let imageContainer = document.getElementById("imageContainer");
