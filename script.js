@@ -20,7 +20,7 @@ const texts = [
   "Blumen am Rand, Wärme in der Hand.",
   "Wintermorgen. Leise. Klar. Einfach sein.",
   "Fenster auf, Gedanken raus, Tee rein.",
-  "Wie Blüten im Wasser - so leicht fühlt sich heute an.",
+  "Wie Blüten im Wasser, so leicht fühlt sich heute an.",
   "Zimt, Tee und ein Hauch von Weihnachten.",
   "Erde. Tee. Nüsse. Alles verbunden.",
   "Montagmorgen. Stärker als jeder Kaffee.",

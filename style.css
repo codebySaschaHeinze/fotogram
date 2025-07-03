@@ -20,16 +20,16 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-color: rgb(79, 55, 19);
+  background-color: rgb(43, 12, 7);
 }
 
 header {
   height: 70px;
   max-width: 100%;
-  background-color: rgb(90, 57, 22);
+  background-color: rgb(34, 6, 2);
 }
 
-p {
+h2 {
   font-family: "pFont";
   color: rgb(228, 243, 177);
   font-size: 2rem;
@@ -38,9 +38,18 @@ p {
 }
 
 footer {
-  height: 50px;
+  height: 70px;
   max-width: 100%;
-  background-color: rgb(90, 57, 22);
+  background-color: rgb(34, 6, 2);
+}
+
+p {
+  font-family: "pFont";
+  color: rgb(228, 243, 177);
+  font-size: clamp(1rem, 2rem, 2.1rem);
+  font-weight: 200;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .mainContainer {
@@ -49,6 +58,7 @@ footer {
   max-width: 100%;
   flex: 1;
   align-items: center;
+  text-align: center;
 }
 
 .fotogramAndLogo {
@@ -80,18 +90,18 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
-  padding: 48px 48px 48px 48px;
+  gap: 24px;
+  padding: 48px clamp(10px, 90vw, 60px);
 }
 
 #imageContainer img {
-  width: clamp(50px, 100px, 150px);
+  width: clamp(150px, 10vw, 300px);
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px 4px rgba(247, 183, 94, 0.113);
   cursor: pointer;
-  transition: transform 0.4s;
+  transition: transform 0.55s;
 }
 
 #imageContainer img:hover {
@@ -103,13 +113,14 @@ footer {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 85vh;
-  width: clamp(100vw, 70vw, 70vw);
-  background-color: rgba(0, 0, 0, 0.9);
+  max-height: auto;
+  width: clamp(200px, 100%, 400px);
+  background-color: rgba(43, 24, 7, 0.9);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -119,18 +130,17 @@ footer {
 }
 
 #overlayImage {
-  max-width: 70vh;
-  max-height: auto;
+  width: clamp(200px, 80%, 400px);
   border-radius: 8px;
-  margin-bottom: 40px;
+  margin: 0, 40px, 10px, 40px;
 }
 
 .closeButton {
   position: absolute;
   top: 15px;
   right: 15px;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   cursor: pointer;
 }
 
@@ -155,4 +165,7 @@ footer {
 .textContainer {
   font-size: 16px;
   text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
 }
