@@ -11,14 +11,18 @@ const images = [
   "./img/t10.jpg",
   "./img/t11.jpg",
   "./img/t12.jpg",
+  "./img/t13.jpg",
+  "./img/t14.jpg",
+  "./img/t15.jpg",
+  "./img/t16.jpg",
 ];
 
 const texts = [
-  "Herbsttage schmecken nach Gewürztee und Stille.",
   "Ein Schluck Morgenruhe, bevor der Tag beginnt.",
   "Manchmal braucht es nur Tee und Zeit.",
   "Blumen am Rand, Wärme in der Hand.",
   "Wintermorgen. Leise. Klar. Einfach sein.",
+  "Herbsttage schmecken nach Gewürztee und Stille.",
   "Fenster auf, Gedanken raus, Tee rein.",
   "Wie Blüten im Wasser, so leicht fühlt sich heute an.",
   "Zimt, Tee und ein Hauch von Weihnachten.",
@@ -26,6 +30,10 @@ const texts = [
   "Montagmorgen. Stärker als jeder Kaffee.",
   "Goldene Ruhe in klarer Glastasse.",
   "Ein Moment für dich. Nur Tee und Wärme.",
+  "Still sein. Tee trinken. Weitermachen.",
+  "Tee statt Worte. Reicht manchmal.",
+  "Kurz atmen, lang Tee trinken.",
+  "Mehr Tee, weniger Drama.",
 ];
 
 let imageContainer = document.getElementById("imageContainer");
@@ -46,13 +54,14 @@ function showOverlay(event) {
   overlay.classList.remove("d_none");
   const clickedFile = event.target.src.split("/").pop();
   currentImage = images.findIndex((img) => img.endsWith(clickedFile));
-  let textContainer = document.getElementById("textContainer");
-  textContainer.innerHTML = `<p class="textContainer">${texts[currentImage]}</p>`;
+  let overlayTextContainer = document.getElementById("overlayTextContainer");
+  overlayTextContainer.innerHTML = `<p class="overlayTextContainer">${texts[currentImage]}</p>`;
 }
 
 function closeOverlay() {
   overlay.classList.add("d_none");
 }
+
 imageContainer.addEventListener("click", showOverlay);
 
 function nextImage() {
@@ -68,6 +77,6 @@ function prevImage() {
 }
 
 function updateText() {
-  let textContainer = document.getElementById("textContainer");
-  textContainer.innerHTML = `<p class="textContainer">${texts[currentImage]}</p>`;
+  let overlayTextContainer = document.getElementById("overlayTextContainer");
+  overlayTextContainer.innerHTML = `<p class="overlayTextContainer">${texts[currentImage]}</p>`;
 }
