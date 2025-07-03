@@ -131,7 +131,7 @@ p {
 }
 
 #overlayImage {
-  width: clamp(200px, 80%, 400px);
+  width: clamp(300px, 80%, 400px);
   border-radius: 8px;
   margin: 0, 40px, 10px, 40px;
 }
