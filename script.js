@@ -43,9 +43,7 @@ teaArray.forEach((imageUrl) => {
 
 // Funktion, die für jedes Vorschaubild aufgerufen wird
 function functionImageClick(event) {
-  // Overlay einblenden
-  overlay.classList.remove("d_none");
-  // Großes Bild tauschen
+  overlay.classList.remove("d_none"); // entfernt die Klasse "d_none" vom overlay
   overlayImage.src = event.target.src;
   overlayImage.alt = event.target.alt;
 }
