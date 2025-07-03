@@ -71,12 +71,11 @@ p {
   height: 50px;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 4px;
   padding-left: clamp(1px, 7vw, 60px);
   font-family: "logoFont";
   font-size: 0.8rem;
   color: rgb(228, 243, 177);
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
   gap: 2px;
 }
