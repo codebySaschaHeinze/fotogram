@@ -78,12 +78,14 @@ p {
   color: rgb(228, 243, 177);
   margin-top: 10px;
   margin-bottom: 10px;
-  gap: 4px;
+  gap: 2px;
 }
 
 .logoImg {
-  height: 50px;
+  height: 55px;
   width: auto;
+  padding-bottom: 24px;
+  transform: rotate(7deg);
 }
 
 .contentContainer {
