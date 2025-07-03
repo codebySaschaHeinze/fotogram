@@ -24,7 +24,7 @@ body {
 }
 
 header {
-  height: 70px;
+  height: 90px;
   max-width: 100%;
   background-color: rgb(34, 6, 2);
 }
@@ -136,33 +136,49 @@ p {
   width: clamp(300px, 80%, 400px);
   border-radius: 8px;
   margin: 0, 40px, 10px, 40px;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.7);
 }
 
 .closeButton {
   position: absolute;
   top: 15px;
   right: 15px;
-  height: 15px;
-  width: 15px;
+  height: 18px;
+  width: auto;
   cursor: pointer;
+  transition: transform 1 ease-in-out;
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
 }
 
 .nextButton {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  height: 30px;
+  height: 32px;
   width: auto;
   cursor: pointer;
+  transition: transform 2 ease-in-out;
+}
+
+.nextButton:hover {
+  transform: scale(1.1);
 }
 
 .prevButton {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  height: 30px;
+  height: 32px;
   width: auto;
   cursor: pointer;
+  transition: transform 2 ease-in-out;
+}
+
+.prevButton:hover {
+  transform: scale(1.1);
 }
 
 .overlayTextContainer {
@@ -173,7 +189,7 @@ p {
 }
 
 .footerText {
-  font-family: "pFont";
+  font-family: "logoFont";
   color: rgb(228, 243, 177);
   font-size: 1rem;
   font-weight: 100;

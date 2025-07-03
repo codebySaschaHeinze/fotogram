@@ -6,7 +6,6 @@ const images = [
   "./img/t5.jpg",
   "./img/t6.jpg",
   "./img/t7.jpg",
-  "./img/t8.jpg",
   "./img/t9.jpg",
   "./img/t10.jpg",
   "./img/t11.jpg",
@@ -24,16 +23,15 @@ const texts = [
   "Blumen am Rand, Wärme in der Hand.",
   "Herbsttage schmecken nach Gewürztee und Stille.",
   "Wintermorgen. Leise. Klar. Einfach sein.",
-  "Wie Blüten im Wasser, so leicht fühlt sich heute an.",
-  "Fenster auf, Gedanken raus, Tee rein.",
-  "Erde. Tee. Nüsse. Alles verbunden.",
+  "So leicht wie eine Blüte auf dem Wasser.",
+  "Erde. Tee und Nüsse. Alles verbunden.",
   "Zimt, Tee und ein Hauch von Weihnachten.",
   "Montagmorgen. Stärker als jeder Kaffee.",
   "Goldene Ruhe in klarer Glastasse.",
   "Ein Moment für dich. Nur Tee und Wärme.",
-  "Still sein. Tee trinken. Weitermachen.",
+  "Stille genießen, Tee trinken und weitermachen.",
   "Tee statt Worte. Reicht manchmal.",
-  "Kurz atmen, lang Tee trinken.",
+  "Kurz durchatmen, lang Tee trinken.",
 ];
 
 let imageContainer = document.getElementById("imageContainer");
