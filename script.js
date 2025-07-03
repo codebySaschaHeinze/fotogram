@@ -44,6 +44,6 @@ teaArray.forEach((imageUrl) => {
 // Funktion, die für jedes Vorschaubild aufgerufen wird
 function functionImageClick(event) {
   overlay.classList.remove("d_none"); // entfernt die Klasse "d_none" vom overlay
-  overlayImage.src = event.target.src;
-  overlayImage.alt = event.target.alt;
+  overlayImage.src = event.target.src; // Vorschbild, welches in das Overlay kopiert wird
+  overlayImage.alt = event.target.alt; // Alternativtext, welches in das Overlay kopiert wird
 }
