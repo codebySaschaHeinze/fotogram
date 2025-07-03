@@ -34,6 +34,7 @@ p {
   color: rgb(228, 243, 177);
   font-size: 2rem;
   font-weight: 200;
+  margin-top: 70px;
 }
 
 footer {
@@ -47,6 +48,7 @@ footer {
   flex-direction: column;
   max-width: 100%;
   flex: 1;
+  align-items: center;
 }
 
 .fotogramAndLogo {
@@ -98,4 +100,53 @@ footer {
 
 .overlay.d_none {
   display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90vh;
+  width: 30vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#overlayImage {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.nextButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+}
+
+.prevButton {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  height: 30px;
+  width: auto;
+  cursor: pointer;
 }

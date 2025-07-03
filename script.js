@@ -17,6 +17,25 @@ function renderImages() {
   let imageContainer = document.getElementById("imageContainer");
   imageContainer.innerHTML = "";
   for (let i = 0; i < images.length; i++) {
-    imageContainer.innerHTML += `<img src="${images[i]}" alt="">`;
+    imageContainer.innerHTML += `<img src="${images[i]}" alt="Tea Cup">`;
   }
 }
+
+let imageContainer = document.getElementById("imageContainer");
+let overlay = document.getElementById("overlay");
+let overlayImage = document.getElementById("overlayImage");
+
+function showOverlay(event) {
+  overlayImage.src = event.target.src;
+  overlay.classList.remove("d_none");
+}
+
+function removeOverlay() {
+  overlay.classList.add("d_none");
+}
+
+imageContainer.addEventListener("click", showOverlay);
+
+function nextImage() {}
+
+function prevImage() {}
