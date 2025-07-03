@@ -170,3 +170,12 @@ p {
   margin-right: 20px;
   margin-top: 40px;
 }
+
+.footerText {
+  font-family: "pFont";
+  color: rgb(228, 243, 177);
+  font-size: clamp(1rem, 1.2rem, 1.4rem);
+  font-weight: 100;
+  margin-left: 24px;
+  margin-right: 24px;
+}
