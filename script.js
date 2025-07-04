@@ -45,9 +45,9 @@ function renderImages() {
 function showOverlay(i) {
   let mainContainerVar = document.getElementById("mainContainer");
 
-  mainContainerVar.innerHTML = `
+  mainContainerVar.innerHTML += `
       <div id="overlayContainer" class="overlay">
-        <button onclick="klaus()" class="closeButton"></button>
+        <img onclick="closeOverlay()" class="closeButton" src="./img/close-button.png" alt="">
         <img id="overlayImage" src="${images[i]}" alt="" />
         <p>${texts[i]}</p>
         <img onclick="nextImage(${i})" class="nextButton" id="nextButton" src="./img/next-button.png" alt="">
@@ -57,7 +57,7 @@ function showOverlay(i) {
   console.log(i);
 }
 
-function klaus() {
+function closeOverlay() {
   document.getElementById("overlayContainer").classList.add("d_none");
 }
 
@@ -67,7 +67,7 @@ function nextImage(i) {
     i = 0;
   }
   document.getElementById("overlayContainer").innerHTML = `
-        <button onclick="klaus()" class="closeButton"></button>
+        <img onclick="closeOverlay()" class="closeButton" src="./img/close-button.png" alt="">
         <img id="overlayImage" src="${images[i]}" alt="" />
         <p>${texts[i]}</p>
         <img onclick="nextImage(${i})" class="nextButton" id="nextButton" src="./img/next-button.png" alt="">
@@ -82,7 +82,7 @@ function prevImage(i) {
     i = images.length - 1;
   }
   document.getElementById("overlayContainer").innerHTML = `
-        <button onclick="klaus()" class="closeButton"></button>
+        <img onclick="closeOverlay()" class="closeButton" src="./img/close-button.png" alt="">
         <img id="overlayImage" src="${images[i]}" alt="" />
         <p>${texts[i]}</p>
         <img onclick="nextImage(${i})" class="nextButton" id="nextButton" src="./img/next-button.png" alt="">
@@ -90,5 +90,3 @@ function prevImage(i) {
       `;
   console.log(i);
 }
-
-function updateText() {}
