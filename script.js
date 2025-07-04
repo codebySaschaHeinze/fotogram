@@ -54,7 +54,6 @@ function showOverlay(i) {
         <img onclick="prevImage(${i})" class="prevButton" id="prevButton" src="./img/prev-button.png" alt="">
       </div>;
     `;
-  console.log(i);
 }
 
 function closeOverlay() {
@@ -79,7 +78,6 @@ function nextImage(i) {
         <img onclick="nextImage(${i})" class="nextButton" id="nextButton" src="./img/next-button.png" alt="">
         <img onclick="prevImage(${i})" class="prevButton" id="prevButton" src="./img/prev-button.png" alt="">
       `;
-  console.log(i);
 }
 
 function prevImage(i) {

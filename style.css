@@ -47,6 +47,16 @@ footer {
   box-shadow: 0px 0px 15px 4px rgba(34, 6, 2, 0.8);
 }
 
+footer p {
+  font-family: "pFont";
+  color: rgb(228, 243, 177);
+  font-size: 1.7rem;
+  font-weight: 200;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 15px;
+}
+
 p {
   font-family: "pFont";
   color: rgb(228, 243, 177);
@@ -54,7 +64,7 @@ p {
   font-weight: 200;
   margin-left: 24px;
   margin-right: 24px;
-  margin-top: 150px;
+  margin-top: 120px;
 }
 
 .mainContainer {
@@ -64,6 +74,15 @@ p {
   flex: 1;
   align-items: center;
   text-align: center;
+}
+
+.footerText {
+  font-family: "logoFont";
+  color: rgb(228, 243, 177);
+  font-size: 1rem;
+  font-weight: 100;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .fotogramAndLogo {
@@ -103,7 +122,7 @@ p {
 }
 
 #imageContainer img {
-  width: clamp(130px, 10vw, 300px);
+  width: clamp(130px, 10vw, 500px);
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 8px;
@@ -202,5 +221,4 @@ p {
   font-weight: 100;
   margin-left: 24px;
   margin-right: 24px;
-  padding-bottom: 20px;
 }
