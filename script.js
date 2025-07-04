@@ -45,7 +45,7 @@ function renderImages() {
 function showOverlay(i) {
   let mainContainerVar = document.getElementById("mainContainer");
 
-  mainContainerVar.innerHTML += `
+  mainContainerVar.innerHTML = `
       <div id="overlayContainer" class="overlay">
         <img onclick="closeOverlay()" class="closeButton" src="./img/close-button.png" alt="">
         <img id="overlayImage" src="${images[i]}" alt="" />
@@ -58,11 +58,18 @@ function showOverlay(i) {
 
 function closeOverlay() {
   document.getElementById("overlayContainer").classList.add("d_none");
+<<<<<<< HEAD
+  document.getElementByI(
+    "mainContainer"
+  ).innerHTML = `<h2>My fancy teacup collection</h2>
+      <div id="imageContainer"></div>`;
+=======
   document.getElementById(
     "mainContainer"
   ).innerHTML = `<h2>My fancy teacup collection</h2>
       <div id="imageContainer"></div>`;
   renderImages();
+>>>>>>> 82497ba0cad3a792736f4a8ab12d75c3e3f5edbf
 }
 
 function nextImage(i) {
