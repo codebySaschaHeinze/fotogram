@@ -59,6 +59,11 @@ function showOverlay(i) {
 
 function closeOverlay() {
   document.getElementById("overlayContainer").classList.add("d_none");
+  document.getElementById(
+    "mainContainer"
+  ).innerHTML = `<h2>My fancy teacup collection</h2>
+      <div id="imageContainer"></div>`;
+  renderImages();
 }
 
 function nextImage(i) {
