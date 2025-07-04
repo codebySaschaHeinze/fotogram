@@ -35,10 +35,10 @@ const texts = [
 ];
 
 function renderImages() {
-  let imageContainer = document.getElementById("imageContainer");
-  imageContainer.innerHTML = "";
+  let imageContainerVar = document.getElementById("imageContainer");
+  imageContainerVar.innerHTML = "";
   for (let i = 0; i < images.length; i++) {
-    imageContainer.innerHTML += `<img onclick="showOverlay(${i})" src="${images[i]}" alt="">`;
+    imageContainerVar.innerHTML += `<img onclick="showOverlay(${i})" src="${images[i]}" alt="">`;
   }
 }
 
@@ -66,6 +66,7 @@ function nextImage(i) {
   if (i == images.length) {
     i = 0;
   }
+
   document.getElementById("overlayContainer").innerHTML = `
         <img onclick="closeOverlay()" class="closeButton" src="./img/close-button.png" alt="">
         <img id="overlayImage" src="${images[i]}" alt="" />
