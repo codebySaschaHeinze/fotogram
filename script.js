@@ -34,47 +34,61 @@ const texts = [
   "Kurz durchatmen, lang Tee trinken.",
 ];
 
-let imageContainer = document.getElementById("imageContainer");
-let overlay = document.getElementById("overlay");
-let overlayImage = document.getElementById("overlayImage");
-let currentImage = 0;
-
 function renderImages() {
   let imageContainer = document.getElementById("imageContainer");
   imageContainer.innerHTML = "";
   for (let i = 0; i < images.length; i++) {
-    imageContainer.innerHTML += `<img src="${images[i]}" alt="Tea Cup">`;
+    imageContainer.innerHTML += `<img onclick="showOverlay(${i})" src="${images[i]}" alt="">`;
   }
 }
 
-function showOverlay(event) {
-  overlayImage.src = event.target.src;
-  overlay.classList.remove("d_none");
-  const clickedFile = event.target.src.split("/").pop();
-  currentImage = images.findIndex((img) => img.endsWith(clickedFile));
-  let overlayTextContainer = document.getElementById("overlayTextContainer");
-  overlayTextContainer.innerHTML = `<p class="overlayTextContainer">${texts[currentImage]}</p>`;
+function showOverlay(i) {
+  let mainContainerVar = document.getElementById("mainContainer");
+
+  mainContainerVar.innerHTML = `
+      <div id="overlayContainer" class="overlay">
+        <button onclick="klaus()" class="closeButton"></button>
+        <img id="overlayImage" src="${images[i]}" alt="" />
+        <p>${texts[i]}</p>
+        <img onclick="nextImage(${i})" class="nextButton" id="nextButton" src="./img/next-button.png" alt="">
+        <img onclick="prevImage(${i})" class="prevButton" id="prevButton" src="./img/prev-button.png" alt="">
+      </div>;
+    `;
+  console.log(i);
 }
 
-function closeOverlay() {
-  overlay.classList.add("d_none");
+function klaus() {
+  document.getElementById("overlayContainer").classList.add("d_none");
 }
 
-imageContainer.addEventListener("click", showOverlay);
-
-function nextImage() {
-  currentImage = (currentImage + 1) % images.length;
-  overlayImage.src = images[currentImage];
-  updateText();
+function nextImage(i) {
+  i = i + 1;
+  if (i == images.length) {
+    i = 0;
+  }
+  document.getElementById("overlayContainer").innerHTML = `
+        <button onclick="klaus()" class="closeButton"></button>
+        <img id="overlayImage" src="${images[i]}" alt="" />
+        <p>${texts[i]}</p>
+        <img onclick="nextImage(${i})" class="nextButton" id="nextButton" src="./img/next-button.png" alt="">
+        <img onclick="prevImage(${i})" class="prevButton" id="prevButton" src="./img/prev-button.png" alt="">
+      `;
+  console.log(i);
 }
 
-function prevImage() {
-  currentImage = (currentImage - 1 + images.length) % images.length;
-  overlayImage.src = images[currentImage];
-  updateText();
+function prevImage(i) {
+  i = i - 1;
+  if (i == 0) {
+    i = images.length - 1;
+  }
+  document.getElementById("overlayContainer").innerHTML = `
+        <button onclick="klaus()" class="closeButton"></button>
+        <img id="overlayImage" src="${images[i]}" alt="" />
+        <p>${texts[i]}</p>
+        <img onclick="nextImage(${i})" class="nextButton" id="nextButton" src="./img/next-button.png" alt="">
+        <img onclick="prevImage(${i})" class="prevButton" id="prevButton" src="./img/prev-button.png" alt="">
+      `;
+  console.log(i);
 }
 
-function updateText() {
-  let overlayTextContainer = document.getElementById("overlayTextContainer");
-  overlayTextContainer.innerHTML = `<p class="overlayTextContainer">${texts[currentImage]}</p>`;
-}
+function updateText() {}
