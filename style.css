@@ -118,11 +118,11 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 60px clamp(10px, 90vw, 60px) 120px;
+  padding: 60px 5vw 120px;
 }
 
 #imageContainer img {
-  width: clamp(130px, 10vw, 500px);
+  width: clamp(150px, 12vw, 600px);
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 8px;
